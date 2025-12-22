@@ -19,7 +19,7 @@
         overflow-x: hidden;
       }
 
-      /* Header & Navigation */
+      /* Header & Navigation - FIXED */
       header {
         background: linear-gradient(135deg, #000000 0%, #c29709 100%);
         color: white;
@@ -38,17 +38,26 @@
         max-width: 1400px;
         margin: 0 auto;
         padding: 0 2rem;
+        min-height: 70px;
       }
 
       .logo img {
         max-width: 11rem;
         height: auto;
+        display: block;
       }
 
       .nav-links {
         display: flex;
         gap: 2rem;
         list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links li {
+        margin: 0;
+        padding: 0;
       }
 
       .nav-links a {
@@ -56,6 +65,8 @@
         text-decoration: none;
         transition: color 0.3s;
         font-weight: 500;
+        display: block;
+        padding: 0.5rem 0;
       }
 
       .nav-links a:hover {
@@ -227,6 +238,7 @@
         margin-bottom: 1.5rem;
         line-height: 1.8;
         color: #000000;
+        font-size: 1.1rem;
       }
 
       .about-image {
@@ -264,38 +276,50 @@
 
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .service-card {
         background: white;
-        padding: 2.5rem;
+        padding: 2rem;
         border-radius: 15px;
         text-align: center;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-        border-top: 4px solid #ff6b35;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
       }
 
       .service-card:hover {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       }
 
       .service-icon {
-        font-size: 4rem;
-        margin-bottom: 1rem;
+        font-size: 4.5rem;
+        margin-bottom: 1.5rem;
+        display: block;
       }
 
       .service-card h3 {
-        color: #ff6b35;
+        color: #2d5016;
         margin-bottom: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       .service-card p {
-        color: #555;
+        color: #666;
         line-height: 1.7;
+        font-size: 0.95rem;
       }
 
       /* Products Section */
@@ -421,6 +445,11 @@
         font-size: 1.8rem;
       }
 
+      .contact-info > p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
       .contact-method {
         display: flex;
         align-items: start;
@@ -440,6 +469,8 @@
 
       .contact-method p {
         color: #555;
+        font-size: 1.05rem;
+        line-height: 1.6;
       }
 
       .contact-form {
@@ -571,11 +602,18 @@
           box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
           padding: 2rem 0;
           gap: 0;
+          margin: 0;
         }
 
         .nav-links li {
-          padding: 1rem 0;
+          padding: 0;
+          margin: 0;
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-links a {
+          padding: 1rem 0;
+          display: block;
         }
 
         .nav-links.active {
@@ -601,7 +639,7 @@
         }
 
         .section-title {
-          font-size: 2.2rem;
+          font-size: 2.5rem;
         }
 
         .stats-bar {
@@ -616,9 +654,43 @@
           padding: 3rem 1.5rem;
         }
 
-        .services-grid,
-        .products-grid {
+        .services-grid {
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        /* FIXED: Products grid in 2 columns on tablets */
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+        }
+
+        /* FIXED: Services grid in 2 columns on tablets with third centered */
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+          max-width: 100%;
+        }
+
+        .service-card:nth-child(3) {
+          grid-column: 1 / -1;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        .service-card {
+          padding: 1.5rem;
+        }
+
+        .service-icon {
+          font-size: 3.5rem;
+        }
+
+        .service-card h3 {
+          font-size: 1.1rem;
+        }
+
+        .service-card p {
+          font-size: 0.9rem;
         }
       }
 
@@ -663,17 +735,72 @@
         }
 
         .section-subtitle {
+          font-size: 2rem;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+
+        .service-card:nth-child(3) {
+          grid-column: 1 / -1;
+          max-width: 350px;
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .service-card {
+          padding: 1.5rem 1rem;
+        }
+
+        .service-icon {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
           font-size: 1rem;
+          margin-bottom: 0.8rem;
         }
 
-        .services-grid,
+        .service-card p {
+          font-size: 0.85rem;
+        }
+
+        /* FIXED: Products grid in 2 columns on mobile */
         .products-grid {
-          grid-template-columns: 1fr;
-          gap: 1.5rem;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
         }
 
-        .service-card,
         .product-card {
+          padding: 0;
+        }
+
+        .product-info {
+          padding: 1rem;
+        }
+
+        .product-image {
+          height: 150px;
+          font-size: 4rem;
+        }
+
+        .product-info h3 {
+          font-size: 1.2rem;
+        }
+
+        .product-detail-item {
+          font-size: 0.8rem;
+        }
+
+        .feature-tag {
+          font-size: 0.75rem;
+          padding: 0.2rem 0.6rem;
+        }
+
+        .service-card {
           padding: 1.5rem;
         }
 
@@ -718,12 +845,22 @@
         }
 
         .service-icon {
-          font-size: 3rem;
+          font-size: 2.5rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .service-card h3 {
+          font-size: 0.9rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .service-card p {
+          font-size: 0.8rem;
         }
 
         .product-image {
-          height: 150px;
-          font-size: 4rem;
+          height: 120px;
+          font-size: 3rem;
         }
 
         .stat-number {
@@ -744,6 +881,15 @@
           padding: 0.7rem 1.2rem;
           font-size: 0.9rem;
         }
+
+        /* Keep 2 columns but make them smaller */
+        .products-grid {
+          gap: 0.75rem;
+        }
+
+        .product-info h3 {
+          font-size: 1rem;
+        }
       }
 
       /* Extra Small Mobile - below 360px */
@@ -760,8 +906,11 @@
           font-size: 1.3rem;
         }
 
-        .service-card h3,
         .product-info h3 {
+          font-size: 0.95rem;
+        }
+
+        .service-card h3 {
           font-size: 1.2rem;
         }
       }
