@@ -200,11 +200,13 @@
       .section-title {
         text-align: center;
         font-size: 2.8rem;
-        margin-bottom: 1rem;
+        margin-bottom: 4rem;
         color: #e4b007;
       }
 
       .section-subtitle {
+         text-align: center;
+        line-height: 1.6;
         text-align: center;
         font-size: 1.2rem;
         color: #666;
@@ -236,6 +238,8 @@
       }
 
       .about-text p {
+        text-align: center;
+        line-height: 1.6;
         margin-bottom: 1.5rem;
         line-height: 1.8;
         color: #000000;
@@ -245,82 +249,148 @@
  
 
 /* Asegurar que el contenedor tenga altura definida */
-.about-image {
-  height: 353px; /* Ajusta esta altura según necesites */
-  overflow: hidden;
-  border-radius: 12px;
-       
-  background: url(https://www.ks-iberia.com/shared/.images/agriculture/kali-academy/crops/crops-mango-5-2.jpg?__scale=w:1248,h:499,t:2,q:80);
-}
+      .about-image {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 12px;     
+        background: url(img/Foto\ fruta.PNG);
+        background-size: cover;
+        background-position: center;
+      }
+
 
       /* Services Section */
-      .services {
-        background: #f7931e;
-        color: #e4b007;
-      }
+     .services {
+  background: linear-gradient(135deg, #f7931e 0%, #d1b204 100%);
+  color: #e4b007;
+}
 
-      .services-title {
-        text-align: center;
-        font-size: 2.8rem;
-        margin-bottom: 1rem;
-        color: #ffffff;
-      }
+.services-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
 
-      .services-subtitle {
-        text-align: center;
-        font-size: 1.2rem;
-        color: #383737;
-        max-width: 800px;
-        margin: 0 auto 3rem;
-      }
+.services-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #383737;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
 
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-      .service-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-        border: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-      }
+.service-card {
+  background: rgba(255, 255, 255, 0.178);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-      .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      }
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-      .service-icon {
-        font-size: 4.5rem;
-        margin-bottom: 1.5rem;
-        display: block;
-      }
+.service-icon {
+ width: 320px;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  display: block;
+}
 
-      .service-card h3 {
-        color: #2d5016;
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
+.service-card h3 {
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
-      .service-card p {
-        color: #666;
-        line-height: 1.7;
-        font-size: 0.95rem;
-      }
+.service-card p {
+  color: #000000;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVE - Tablets */
+@media (max-width: 968px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-icon {
+    width: 280px;
+    height: 200px;
+    margin-bottom: 1.2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  .quality img {
+    max-width: 100%;
+  }
+}
+
+/* RESPONSIVE - Mobile */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-icon {
+    width: 280px;
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  .quality img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+}
 
       /* Products Section */
       .products {
@@ -423,12 +493,22 @@
       .quality-title {
         text-align: center;
         font-size: 2.8rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         color: #ffffff;
       }
 
-      /* Contact Section */
-   .contact {
+      .quality img {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      }
+
+/* Contact Section */
+.contact {
   background-color: #ffffff;
   padding: 80px 0;
 }
@@ -444,7 +524,7 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 /* Logo */
@@ -452,13 +532,12 @@
   text-align: center;
   margin-bottom: 20px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #ff6b35;
+  border-bottom: 2px solid #f7931e;
 }
 
 .contact-logo img {
-  width: 120px;
+  width: 140px;
   height: auto;
-  
 }
 
 /* Método de contacto */
@@ -466,34 +545,67 @@
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-method:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
 }
 
 .contact-icon-wrapper {
-  width: 45px;
-  height: 45px;
-  border: 2px solid #ff6b35;
-  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-icon-wrapper:hover {
-  background-color: #ff6b35;
-  transform: translateY(-2px);
+.contact-icon-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f7931e 0%, #ffd700 100%);
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  z-index: 1;
 }
 
-.contact-icon-svg {
-  width: 22px;
-  height: 22px;
-  color: #ff6b35;
-  transition: color 0.3s ease;
+.contact-method:hover .contact-icon-wrapper {
+  border-color: #ffd700;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3);
 }
 
-.contact-icon-wrapper:hover .contact-icon-svg {
-  color: #ffffff;
+.contact-method:hover .contact-icon-wrapper::before {
+  transform: translateY(0);
+}
+
+.contacto-icon-img {
+  width: 128px;
+  height: 268px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  position: absolute;
+  z-index: 1;
+}
+
+.contact-method:hover .contact-icon-img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  transform: scale(1.1);
 }
 
 .contact-text {
@@ -503,11 +615,20 @@
   gap: 4px;
 }
 
+.contact-label {
+  font-size: 12px;
+  color: #f7931e;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .contact-value {
-  font-size: 15px;
+  font-size: 16px;
   color: #000000;
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.6;
 }
 
@@ -522,7 +643,9 @@
 .contact-form {
   padding: 40px;
   border-radius: 12px;
-  border: 1px solid #f7931e;
+  border: 2px solid #f7931e;
+  background: white;
+  box-shadow: 0 5px 20px rgba(247, 147, 30, 0.1);
 }
 
 .contact-form h3 {
@@ -537,17 +660,17 @@
 
 .form-group label {
   display: block;
-  color:#f7931e;
+  color: #f7931e;
   margin-bottom: 8px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 12px 15px;
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(0, 0, 0, 0.05);
   border: 1px solid #f7931e;
   border-radius: 8px;
   color: #000000;
@@ -558,13 +681,14 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ff6b35;
-  background-color: rgba(0, 0, 0, 0.1);
+  border-color: #ffd700;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(247, 147, 30, 0.1);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(0, 0, 0, 0.808);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .form-group textarea {
@@ -572,31 +696,53 @@
   resize: vertical;
 }
 
-
-
 /* RESPONSIVE */
 @media (max-width: 968px) {
   .contact-wrapper {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 50px;
   }
   
   .contact-info {
-    text-align: center;
+    gap: 25px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact-logo img {
+    width: 120px;
+  }
+
   .contact-method {
-    justify-content: center;
+    padding: 12px;
+  }
+
+  .contact-icon-wrapper {
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact-icon-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-form {
+    padding: 30px 25px;
   }
 }
 
 @media (max-width: 480px) {
   .contact {
-    padding: 60px 0;
+    padding: 50px 0;
   }
   
   .contact-form {
-    padding: 30px 20px;
+    padding: 25px 20px;
   }
   
   .contact-logo img {
@@ -605,11 +751,25 @@
   
   .contact-method {
     gap: 15px;
+    padding: 10px;
   }
   
   .contact-icon-wrapper {
     width: 40px;
     height: 40px;
+  }
+
+  .contact-icon-img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .contact-value {
+    font-size: 14px;
+  }
+
+  .contact-hours {
+    font-size: 12px;
   }
 }
 
@@ -653,6 +813,7 @@
       }
 
       .footer-bottom {
+          background: #f7931e;
         text-align: center;
         padding-top: 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -767,16 +928,11 @@
           gap: 1.5rem;
         }
 
-        /* FIXED: Services grid in 2 columns on tablets with third centered */
+        /* Services in single column on tablets */
         .services-grid {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: 1fr;
           gap: 1.5rem;
-          max-width: 100%;
-        }
-
-        .service-card:nth-child(3) {
-          grid-column: 1 / -1;
-          max-width: 400px;
+          max-width: 600px;
           margin: 0 auto;
         }
 
@@ -785,7 +941,8 @@
         }
 
         .service-icon {
-          font-size: 3.5rem;
+          width: 280px;
+          height: 200px;
         }
 
         .service-card h3 {
@@ -794,6 +951,10 @@
 
         .service-card p {
           font-size: 0.9rem;
+        }
+
+        .quality img {
+          max-width: 100%;
         }
       }
 
@@ -843,19 +1004,14 @@
         }
 
         .section-subtitle {
-          font-size: 4rem;
+          font-size: 2rem;
         }
 
         .services-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
-        }
-
-        .service-card:nth-child(3) {
-          grid-column: 1 / -1;
-          max-width: 350px;
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          max-width: 500px;
           margin: 0 auto;
-          width: 100%;
         }
 
         .service-card {
@@ -863,7 +1019,8 @@
         }
 
         .service-icon {
-          font-size: 3rem;
+          width: 260px;
+          height: 180px;
           margin-bottom: 1rem;
         }
 
@@ -945,7 +1102,7 @@
         }
 
         .section-title {
-          font-size: 1.9rem;
+          font-size: 2.9rem;
         }
 
         .section-subtitle {
@@ -954,7 +1111,8 @@
         }
 
         .service-icon {
-          font-size: 2.5rem;
+          width: 240px;
+          height: 160px;
           margin-bottom: 0.8rem;
         }
 
@@ -965,6 +1123,10 @@
 
         .service-card p {
           font-size: 0.8rem;
+        }
+
+        .quality img {
+          border-radius: 6px;
         }
 
         .product-image {
@@ -1016,7 +1178,7 @@
         }
 
         .section-title {
-          font-size: 1.3rem;
+          font-size: 2.3rem;
         }
 
         .product-info h3 {
@@ -1060,7 +1222,7 @@
       <div class="hero-content">
         <h1>Premium Fresh Produce Exports</h1>
         <p>
-         Connecting Colombia’s fresh produce to global markets through quality, 
+         Connecting Colombia's fresh produce to global markets through quality, 
          consistency and trusted partnerships.
         </p>
         <div>
@@ -1073,12 +1235,10 @@
     <!-- About Section -->
     <section class="about" id="about">
       <div class="container">
-        <h2 class="section-title">About TROPEX</h2>
-        <p class="section-subtitle">
-         Tropex, we specialize in exporting fresh fruits and herbs from Colombia to international markets. 
-        </p>
+        <h2 class="section-title">AT TROPEX</h2>
         <div class="about-content">
           <div class="about-text">
+            <P> Tropex, we specialize in exporting fresh fruits and herbs from Colombia to international markets. </P>
             <p>We work closely with trusted growers to ensure consistent quality, reliable supply, and efficient logistics.
                Our focus is on building long-term partnerships through transparency, traceability, and high product standards.</p>
             <p>
@@ -1093,36 +1253,36 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
-      <div class="container">
-        <h2 class="services-title">WHAT IS OUR SERVICE?</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">🔍</div>
-            <h3>QUALITY SOURCING</h3>
-            <p>
-             We work directly with trusted growers to source premium fresh 
-             fruits and herbs that meet international quality standards. 
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">📦</div>
-            <h3>SELECTION & PACKING </h3>
-            <p>Each product is carefully selected, packed, and handled to preserve freshness, 
-              consistency, and shelf life throughout the supply chain.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">✈️</div>
-            <h3>EXPORT & LOGISTICS</h3>
-            <p>
-             We manage the export process with reliable logistics solutions, 
-             ensuring timely deliveries and full compliance with international requirements. 
-            </p>
-          </div>
-        </div>
+  <div class="container">
+    <h2 class="services-title">WHAT IS OUR SERVICE?</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="img/Services.png" alt="Quality Sourcing" class="service-icon">
+        <h3>QUALITY SOURCING</h3>
+        <p>
+          We work directly with trusted growers to source premium fresh 
+          fruits and herbs that meet international quality standards. 
+        </p>
       </div>
-    </section>
+
+      <div class="service-card">
+        <img src="img/Services 1.png" alt="Selection & Packing" class="service-icon">
+        <h3>SELECTION & PACKING</h3>
+        <p>Each product is carefully selected, packed, and handled to preserve freshness, 
+          consistency, and shelf life throughout the supply chain.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="img/Services2.png" alt="Export & Logistics" class="service-icon">
+        <h3>EXPORT & LOGISTICS</h3>
+        <p>
+          We manage the export process with reliable logistics solutions, 
+          ensuring timely deliveries and full compliance with international requirements. 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Products Section -->
     <section class="products" id="catalog">
@@ -1136,7 +1296,7 @@
           <!-- Sugar Mango -->
           <div class="product-card">
             <div class="product-image">
-              <span>🥭</span>
+              <span><img src="img/sugar mango.png" style="width: 140px;"></span>
               <span class="product-badge">Bestseller</span>
             </div>
             <div class="product-info">
@@ -1145,36 +1305,13 @@
                 Premium export mangoes from the most internationally demanded
                 varieties, grown under optimal tropical conditions.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Varieties:</span>
-                  <span>Tommy Atkins, Kent, Haden</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>October - March</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Size:</span>
-                  <span>7, 9, 12, 14</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Packing:</span>
-                  <span>4kg boxes</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">No chemicals</span>
-                <span class="feature-tag">GlobalGAP</span>
-                <span class="feature-tag">Sweet & juicy</span>
-              </div>
             </div>
           </div>
 
           <!-- Soursop -->
           <div class="product-card">
             <div class="product-image">
-              <span>🍈</span>
+              <span><img src="img/soursop.png" style="width: 180px;"></span>
               <span class="product-badge">Premium</span>
             </div>
             <div class="product-info">
@@ -1183,36 +1320,14 @@
                 Exotic tropical fruit with creamy texture and unique sweet-tart
                 flavor, rich in antioxidants and vitamins.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Annona muricata</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>1-3 kg</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Brix:</span>
-                  <span>14-16°</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Exotic</span>
-                <span class="feature-tag">Health benefits</span>
-                <span class="feature-tag">Fresh</span>
-              </div>
+   
             </div>
           </div>
 
           <!-- Granadilla -->
           <div class="product-card">
             <div class="product-image">
-              <span>🟠</span>
+              <span><img src="img/Granadilla.png" style="width: 220px;"></span>
               <span class="product-badge">Top Quality</span>
             </div>
             <div class="product-info">
@@ -1221,147 +1336,13 @@
                 Sweet passion fruit with aromatic pulp and edible seeds, perfect
                 for fresh consumption and gourmet cuisine.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Passiflora ligularis</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>80-120g</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Brix:</span>
-                  <span>15-18°</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Sweet</span>
-                <span class="feature-tag">Aromatic</span>
-                <span class="feature-tag">Premium</span>
-              </div>
-            </div>
-          </div>
-          <!-- Yellow Passion Fruit -->
-          <div class="product-card">
-            <div class="product-image">
-              <span>💛</span>
-            </div>
-            <div class="product-info">
-              <h3>Yellow Passion Fruit</h3>
-              <p>
-                Vibrant yellow passion fruit with intense flavor and high
-                acidity, ideal for juices and culinary applications.
-              </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Passiflora edulis f. flavicarpa</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>70-100g</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Juice content:</span>
-                  <span>35-40%</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Intense flavor</span>
-                <span class="feature-tag">High juice</span>
-                <span class="feature-tag">Vitamin C</span>
-              </div>
             </div>
           </div>
 
-          <!-- Purple Passion Fruit -->
+            <!-- Yellow Dragon Fruit -->
           <div class="product-card">
             <div class="product-image">
-              <span>🟣</span>
-              <span class="product-badge">Exotic</span>
-            </div>
-            <div class="product-info">
-              <h3>Purple Passion Fruit</h3>
-              <p>
-                Premium purple passion fruit with sweet-tart flavor, aromatic
-                pulp and high nutritional value for export markets.
-              </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Passiflora edulis</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>60-90g</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Brix:</span>
-                  <span>14-18°</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Aromatic</span>
-                <span class="feature-tag">Antioxidants</span>
-                <span class="feature-tag">Gourmet</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Guava -->
-          <div class="product-card">
-            <div class="product-image">
-              <span>🍐</span>
-            </div>
-            <div class="product-info">
-              <h3>Guava</h3>
-              <p>
-                Tropical guava with fragrant aroma, pink or white flesh,
-                exceptional for fresh consumption and processing.
-              </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Varieties:</span>
-                  <span>Pink, White</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>100-250g</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Brix:</span>
-                  <span>8-12°</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Aromatic</span>
-                <span class="feature-tag">Vitamin C</span>
-                <span class="feature-tag">Fresh</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Yellow Dragon Fruit -->
-          <div class="product-card">
-            <div class="product-image">
-              <span>🐉</span>
+              <span><img src="img/Yellow Dragon fruit.png" style="width: 180px;"></span>
               <span class="product-badge">New</span>
             </div>
             <div class="product-info">
@@ -1370,36 +1351,89 @@
                 Exotic yellow pitaya with sweet white flesh and tiny black
                 seeds, highly sought after in premium markets.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Hylocereus megalanthus</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>300-600g</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Brix:</span>
-                  <span>16-20°</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Exotic</span>
-                <span class="feature-tag">Sweet</span>
-                <span class="feature-tag">Premium</span>
-              </div>
+            </div>
+          </div>
+
+          
+            <!-- Physalis -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/Physalis.png" style="width: 200px;"></span>
+            </div>
+            <div class="product-info">
+              <h3>Physalis</h3>
+              <p>
+                Golden berry with unique sweet-tart flavor, rich in antioxidants
+                and vitamins, perfect for gourmet markets.
+              </p>
+            </div>
+          </div>
+
+          <!-- Yellow Passion Fruit -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/Yellow passion fruit.png" style="width: 180px;"></span>
+            </div>
+            <div class="product-info">
+              <h3>Yellow Passion Fruit</h3>
+              <p>
+                Vibrant yellow passion fruit with intense flavor and high
+                acidity, ideal for juices and culinary applications.
+              </p>
+              
+            </div>
+          </div>
+
+
+          <!-- Purple Passion Fruit -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/Purple passion fruit.png" style="width: 200px;"></span>
+              <span class="product-badge">Exotic</span>
+            </div>
+            <div class="product-info">
+              <h3>Purple Passion Fruit</h3>
+              <p>
+                Premium purple passion fruit with sweet-tart flavor, aromatic
+                pulp and high nutritional value for export markets.
+              </p>
+              
+            </div>
+          </div>
+
+          <!-- Guava -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/red guava.png" style="width: 180px;"></span>
+            </div>
+            <div class="product-info">
+              <h3>Red Guava</h3>
+              <p>
+                Tropical red guava with fragrant aroma, pink or white flesh,
+                exceptional for fresh consumption and processing.
+              </p>
+            </div>
+          </div>
+
+          
+          <!-- Tamarillo -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/Tamarillo.png" style="width: 180px;"></span>
+            </div>
+            <div class="product-info">
+              <h3>Tamarillo</h3>
+              <p>
+                Tree tomato with unique tangy-sweet flavor, rich in vitamins and
+                minerals, perfect for exotic markets.
+              </p>
             </div>
           </div>
 
           <!-- Mangosteen -->
           <div class="product-card">
             <div class="product-image">
-              <span>🟣</span>
+              <span><img src="img/mangosteen.png" style="width: 180px;"></span>
               <span class="product-badge">Premium</span>
             </div>
             <div class="product-info">
@@ -1408,222 +1442,56 @@
                 Queen of fruits with delicate sweet flavor and soft white
                 segments, highly valued in Asian and European markets.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Garcinia mangostana</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>May - September</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>75-150g</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Brix:</span>
-                  <span>18-20°</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Queen of fruits</span>
-                <span class="feature-tag">Delicate</span>
-                <span class="feature-tag">Exotic</span>
-              </div>
             </div>
           </div>
 
-          <!-- Physalis -->
+         <!-- Small banana -->
           <div class="product-card">
             <div class="product-image">
-              <span>🫐</span>
+              <span><img src="img/mangosteen (2).png" style="width: 180px;"></span>
             </div>
             <div class="product-info">
-              <h3>Physalis</h3>
+              <h3>Small Banana</h3>
               <p>
-                Golden berry with unique sweet-tart flavor, rich in antioxidants
-                and vitamins, perfect for gourmet markets.
-              </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Physalis peruviana</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Size:</span>
-                  <span>18-22mm</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Packing:</span>
-                  <span>Clamshells 100g</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Superfood</span>
-                <span class="feature-tag">Organic</span>
-                <span class="feature-tag">Premium</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hass Avocado -->
-          <div class="product-card">
-            <div class="product-image">
-              <span>🥑</span>
-              <span class="product-badge">Top Quality</span>
-            </div>
-            <div class="product-info">
-              <h3>Hass Avocado</h3>
-              <p>
-                Premium Hass avocados grown at ideal altitudes, ensuring
-                superior texture, flavor and high oil content.
-              </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Variety:</span>
-                  <span>Hass Premium</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Sizes:</span>
-                  <span>14, 16, 18, 20, 22</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Dry matter:</span>
-                  <span>23-25%</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Creamy</span>
-                <span class="feature-tag">High oil</span>
-                <span class="feature-tag">ICA certified</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tamarillo -->
-          <div class="product-card">
-            <div class="product-image">
-              <span>🍅</span>
-            </div>
-            <div class="product-info">
-              <h3>Tamarillo</h3>
-              <p>
-                Tree tomato with unique tangy-sweet flavor, rich in vitamins and
-                minerals, perfect for exotic markets.
-              </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Solanum betaceum</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>50-100g</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Varieties:</span>
-                  <span>Red, Yellow</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Exotic</span>
-                <span class="feature-tag">Nutritious</span>
-                <span class="feature-tag">Fresh</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bananito -->
-          <div class="product-card">
-            <div class="product-image">
-              <span>🍌</span>
-            </div>
-            <div class="product-info">
-              <h3>Bananito</h3>
-              <p>
-                Baby banana with intense sweet flavor and creamy texture, highly
+                Small Banana  with intense sweet flavor and creamy texture, highly
                 appreciated in gourmet and premium markets.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Musa acuminata</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Length:</span>
-                  <span>7-10 cm</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Packing:</span>
-                  <span>Clusters</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Sweet</span>
-                <span class="feature-tag">Gourmet</span>
-                <span class="feature-tag">Premium</span>
-              </div>
             </div>
           </div>
 
-          <!-- Carambolo -->
+          
+          <!-- Star fruit -->
           <div class="product-card">
             <div class="product-image">
-              <span>⭐</span>
+              <span><img src="img/star fruit.png" style="width: 180px;"></span>
             </div>
             <div class="product-info">
-              <h3>Carambolo</h3>
+              <h3>Star fruit</h3>
               <p>
                 Star fruit with distinctive shape and refreshing sweet-tart
                 flavor, perfect for decoration and consumption.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Averrhoa carambola</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Weight:</span>
-                  <span>70-130g</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Brix:</span>
-                  <span>6-8°</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Decorative</span>
-                <span class="feature-tag">Refreshing</span>
-                <span class="feature-tag">Exotic</span>
-              </div>
+            </div>
+          </div>
+
+          <!-- Figs -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/13.png" style="width: 180px;"></span>
+              <span class="product-badge">Top Quality</span>
+            </div>
+            <div class="product-info">
+              <h3>Figs</h3>
+              <p>
+                Figs are sweet, soft fruits with a delicate texture and a rich flavor, enjoyed fresh or dried and valued for their nutritional benefits and natural sweetness.
+              </p>
             </div>
           </div>
 
           <!-- Basil -->
           <div class="product-card">
             <div class="product-image">
-              <span>🌿</span>
+              <span><img src="img/Basil.png" style="width: 180px;"></span>
             </div>
             <div class="product-info">
               <h3>Basil</h3>
@@ -1631,73 +1499,14 @@
                 Fresh aromatic basil herb with intense flavor, essential for
                 culinary applications and Mediterranean cuisine.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Ocimum basilicum</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Varieties:</span>
-                  <span>Sweet, Genovese</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Packing:</span>
-                  <span>Fresh bunches</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Aromatic</span>
-                <span class="feature-tag">Fresh</span>
-                <span class="feature-tag">Culinary</span>
-              </div>
             </div>
           </div>
 
-          <!-- Thyme -->
-          <div class="product-card">
-            <div class="product-image">
-              <span>🌱</span>
-            </div>
-            <div class="product-info">
-              <h3>Thyme</h3>
-              <p>
-                Premium fresh thyme with intense aroma and flavor, perfect for
-                gourmet cooking and culinary excellence.
-              </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Thymus vulgaris</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Form:</span>
-                  <span>Fresh sprigs</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Packing:</span>
-                  <span>Fresh bunches</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Aromatic</span>
-                <span class="feature-tag">Premium</span>
-                <span class="feature-tag">Gourmet</span>
-              </div>
-            </div>
-          </div>
-
+          
           <!-- Mint -->
           <div class="product-card">
             <div class="product-image">
-              <span>🍃</span>
+              <span><img src="img/Mint.png" style="width: 180px;"></span>
             </div>
             <div class="product-info">
               <h3>Mint</h3>
@@ -1705,32 +1514,50 @@
                 Fresh mint with refreshing aroma and cooling flavor, ideal for
                 beverages, desserts and culinary creations.
               </p>
-              <div class="product-details">
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Type:</span>
-                  <span>Mentha spicata</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Season:</span>
-                  <span>Year-round</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Varieties:</span>
-                  <span>Spearmint, Peppermint</span>
-                </div>
-                <div class="product-detail-item">
-                  <span class="product-detail-label">Packing:</span>
-                  <span>Fresh bunches</span>
-                </div>
-              </div>
-              <div class="product-features">
-                <span class="feature-tag">Refreshing</span>
-                <span class="feature-tag">Fresh</span>
-                <span class="feature-tag">Aromatic</span>
-              </div>
-            </div>
           </div>
         </div>
+
+         <!-- Rosemary -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/Rosemary.png" style="width: 180px;"></span>
+            </div>
+            <div class="product-info">
+              <h3>Rosemary</h3>
+              <p>
+                Rosemary is an aromatic herb with a fresh, woody scent and a slightly bitter flavor,
+                 widely used in cooking, natural remedies, and aromatherapy.
+              </p>
+          </div>
+        </div>
+
+          <!-- Thyme -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/Thyme.png" style="width: 180px;"></span>
+            </div>
+            <div class="product-info">
+              <h3>Thyme</h3>
+              <p>
+                Premium fresh thyme with intense aroma and flavor, perfect for
+                gourmet cooking and culinary excellence.
+              </p>
+            </div>
+          </div>
+
+           <!-- Tarragon -->
+          <div class="product-card">
+            <div class="product-image">
+              <span><img src="img/Tarragon.png" style="width: 180px;" ></span>
+            </div>
+            <div class="product-info">
+              <h3>Tarragon</h3>
+              <p>
+                Premium fresh thyme with intense aroma and flavor, perfect for
+                gourmet cooking and culinary excellence.
+              </p>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -1738,6 +1565,7 @@
     <section class="quality" id="Logistics">
       <div class="container">
         <h2 class="quality-title">Logistics map of our markets</h2>
+        <img src="img/tropex mapa.jpg">
       </div>
     </section>
 
@@ -1756,9 +1584,7 @@
         <!-- Email -->
         <div class="contact-method">
           <div class="contact-icon-wrapper">
-            <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="5" width="18" height="14" rx="2"/>
-              <path d="M3 7l9 6 9-6"/>
+            <img src="img/email.png" alt="Social Media" class="contacto-icon-img">
             </svg>
           </div>
           <div class="contact-text">
@@ -1769,9 +1595,7 @@
         <!-- Phone -->
         <div class="contact-method">
           <div class="contact-icon-wrapper">
-            <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="5" y="2" width="14" height="20" rx="2"/>
-              <line x1="12" y1="18" x2="12.01" y2="18"/>
+           <img src="img/Contact.png" alt="Social Media" class="contacto-icon-img">
             </svg>
           </div>
           <div class="contact-text">
@@ -1782,9 +1606,7 @@
         <!-- Location -->
         <div class="contact-method">
           <div class="contact-icon-wrapper">
-            <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
+              <img src="img/Location.png" alt="Social Media" class="contacto-icon-img">
             </svg>
           </div>
           <div class="contact-text">
@@ -1792,9 +1614,23 @@
             <p class="contact-hours">Bogotá / Colombia</p>
             <p class="contact-hours">WEEK DAYS / 8 A.M - 6 P.M</p>
           </div>
+
+        </div>
+           <!-- Social Media -->
+        <div class="contact-method">
+          <div class="contact-icon-wrapper">
+            <img src="img/Linkend.png" alt="Social Media" class="contacto-icon-img">
+          </div>
+          <div class="contact-text">
+            <a href="https://www.linkedin.com/company/tropexcol/"><p >@tropexcol</p></a>
+            <p class="contact-hours">LinkedIn</p>
+          </div>
         </div>
       </div>
 
+        
+           
+        <!--Contacto form-->
       <div class="contact-form">
         <h3>Request a Quote</h3>
         <form id="quoteForm">
@@ -1837,61 +1673,7 @@
 </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>TROPEX</h3>
-          <p>
-            With years of experience connecting the freshness of Colombia's
-            finest plantations with the world. Certified quality, reliable
-            shipping, satisfaction guaranteed.
-          </p>
-          <p style="margin-top: 1rem">
-            🌱 Certified | 🌍 50+ Countries | 🏆 Premium Quality
-          </p>
-        </div>
-
-        <div class="footer-section">
-          <h3>Products</h3>
-          <ul>
-            <li><a href="#catalog">Sugar Mango</a></li>
-            <li><a href="#catalog">Soursop</a></li>
-            <li><a href="#catalog">Granadilla</a></li>
-            <li><a href="#catalog">Yellow passion fruit</a></li>
-            <li><a href="#catalog">Purple passion fruit</a></li>
-            <li><a href="#catalog">Guava</a></li>
-            <li><a href="#catalog">Yellow dragon fruit</a></li>
-            <li><a href="#catalog">Mangosteen</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Products</h3>
-          <ul>
-            <li><a href="#catalog">Physalis</a></li>
-            <li><a href="#catalog">Hass avocado</a></li>
-            <li><a href="#catalog">Tamarillo</a></li>
-            <li><a href="#catalog">Bananito</a></li>
-            <li><a href="#catalog">Carambolo</a></li>
-            <li><a href="#catalog">Basil</a></li>
-            <li><a href="#catalog">Thyme</a></li>
-            <li><a href="#catalog">Mint</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Company</h3>
-          <ul>
-            <li><a href="#inicio">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our services</a></li>
-            <li><a href="#catalog">Catalog</a></li>
-            <li><a href="#Logistics">Logistics map</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-
+  
       <div class="footer-bottom">
         <p>&copy; 2025 TROPEX. All rights reserved.</p>
       </div>
