@@ -103,7 +103,6 @@
       }
 
       /* Hero Section */
-       /* Hero Section */
       .hero {
         margin-top: 70px;
         height: 90vh;
@@ -205,7 +204,7 @@
       }
 
       .section-subtitle {
-         text-align: center;
+        text-align: center;
         line-height: 1.6;
         text-align: center;
         font-size: 1.2rem;
@@ -218,6 +217,10 @@
         max-width: 1400px;
         margin: 0 auto;
       }
+
+      .container img{
+        max-width: 2300px;
+      }                    
 
       /* About Section */
       .about {
@@ -246,9 +249,6 @@
         font-size: 1.1rem;
       }
 
- 
-
-/* Asegurar que el contenedor tenga altura definida */
       .about-image {
         width: 100%;
         height: 400px;
@@ -259,138 +259,73 @@
         background-position: center;
       }
 
-
       /* Services Section */
-     .services {
-  background: linear-gradient(135deg, #f7931e 0%, #d1b204 100%);
-  color: #e4b007;
-}
+      .services {
+        background: linear-gradient(135deg, #f7931e 0%, #d1b204 100%);
+        color: #e4b007;
+      }
 
-.services-title {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
+      .services-title {
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+      }
 
-.services-subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #383737;
-  max-width: 800px;
-  margin: 0 auto 3rem;
-}
+      .services-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #383737;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+      }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-.service-card {
-  background: rgba(255, 255, 255, 0.178);
-  padding: 1.5rem 2rem;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
+      .service-card {
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
 
-.service-icon {
- width: 320px;
-  height: 220px;
-  object-fit: contain;
-  margin-bottom: 1.5rem;
-  display: block;
-}
+      .service-icon {
+        width: 320px;
+        height: 460px;
+        object-fit:cover;
+        margin: -6rem;
+        display: block;
+      }
 
-.service-card h3 {
-  color: #000000;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+      .service-card h3 {
+        color: #000000;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
 
-.service-card p {
-  color: #000000;
-  line-height: 1.7;
-  font-size: 0.95rem;
-}
-
-/* RESPONSIVE - Tablets */
-@media (max-width: 968px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .service-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .service-icon {
-    width: 280px;
-    height: 200px;
-    margin-bottom: 1.2rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .service-card p {
-    font-size: 0.9rem;
-  }
-
-  .quality img {
-    max-width: 100%;
-  }
-}
-
-/* RESPONSIVE - Mobile */
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .service-card {
-    padding: 1.5rem;
-  }
-
-  .service-icon {
-    width: 280px;
-    height: 200px;
-    margin-bottom: 1rem;
-  }
-
-  .service-card h3 {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .service-card p {
-    font-size: 0.9rem;
-  }
-
-  .quality img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-}
+      .service-card p {
+        color: #000000;
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
 
       /* Products Section */
       .products {
@@ -425,6 +360,12 @@
         justify-content: center;
         font-size: 5rem;
         position: relative;
+      }
+
+      .product-image img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
       }
 
       .product-badge {
@@ -507,271 +448,189 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
       }
 
-/* Contact Section */
-.contact {
-  background-color: #ffffff;
-  padding: 80px 0;
-}
+      /* Contact Section */
+      .contact {
+        background-color: #ffffff;
+        padding: 80px 0;
+      }
 
-.contact-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 60px;
-  margin-top: 50px;
-}
+      .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 60px;
+        margin-top: 50px;
+      }
 
-/* Información de contacto */
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
 
-/* Logo */
-.contact-logo {
-  text-align: center;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
-  border-bottom: 2px solid #f7931e;
-}
+      .contact-logo {
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #f7931e;
+      }
 
-.contact-logo img {
-  width: 140px;
-  height: auto;
-}
+      .contact-logo img {
+        width: 140px;
+        height: auto;
+      }
 
-/* Método de contacto */
-.contact-method {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
+      .contact-method {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
 
-.contact-method:hover {
-  background-color: #f8f9fa;
-  transform: translateX(5px);
-}
+      .contact-method:hover {
+        background-color: #f8f9fa;
+        transform: translateX(5px);
+      }
 
-.contact-icon-wrapper {
-  width: 50px;
-  height: 50px;
-  
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.4s ease;
-  background-color: white;
-  position: relative;
-  overflow: hidden;
-}
+      .contact-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all 0.4s ease;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+      }
 
-.contact-icon-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #f7931e 0%, #ffd700 100%);
-  transform: translateY(100%);
-  transition: transform 0.4s ease;
-  z-index: 1;
-}
+      .contact-icon-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #f7931e 0%, #ffd700 100%);
+        transform: translateY(100%);
+        transition: transform 0.4s ease;
+        z-index: 1;
+      }
 
-.contact-method:hover .contact-icon-wrapper {
-  border-color: #ffd700;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3);
-}
+      .contact-method:hover .contact-icon-wrapper {
+        border-color: #ffd700;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3);
+      }
 
-.contact-method:hover .contact-icon-wrapper::before {
-  transform: translateY(0);
-}
+      .contact-method:hover .contact-icon-wrapper::before {
+        transform: translateY(0);
+      }
 
-.contacto-icon-img {
-  width: 128px;
-  height: 268px;
-  object-fit: cover;
-  transition: all 0.4s ease;
-  position: absolute;
-  z-index: 1;
-}
+      .contacto-icon-img {
+        width: 128px;
+        height: 268px;
+        object-fit: cover;
+        transition: all 0.4s ease;
+        position: absolute;
+        z-index: 1;
+      }
 
-.contact-method:hover .contact-icon-img {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-  transform: scale(1.1);
-}
+      .contact-method:hover .contact-icon-img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+        transform: scale(1.1);
+      }
 
-.contact-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
+      .contact-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
 
-.contact-label {
-  font-size: 12px;
-  color: #f7931e;
-  margin: 0;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+      .contact-label {
+        font-size: 12px;
+        color: #f7931e;
+        margin: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
 
-.contact-value {
-  font-size: 16px;
-  color: #000000;
-  margin: 0;
-  font-weight: 600;
-  line-height: 1.6;
-}
+      .contact-value {
+        font-size: 16px;
+        color: #000000;
+        margin: 0;
+        font-weight: 600;
+        line-height: 1.6;
+      }
 
-.contact-hours {
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.6);
-  margin: 0;
-  line-height: 1.5;
-}
+      .contact-hours {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 0;
+        line-height: 1.5;
+      }
 
-/* Formulario de contacto */
-.contact-form {
-  padding: 40px;
-  border-radius: 12px;
-  border: 2px solid #f7931e;
-  background: white;
-  box-shadow: 0 5px 20px rgba(247, 147, 30, 0.1);
-}
+      .contact-form {
+        padding: 40px;
+        border-radius: 12px;
+        border: 2px solid #f7931e;
+        background: white;
+        box-shadow: 0 5px 20px rgba(247, 147, 30, 0.1);
+      }
 
-.contact-form h3 {
-  color: #f7931e;
-  margin-bottom: 30px;
-  font-size: 24px;
-}
+      .contact-form h3 {
+        color: #f7931e;
+        margin-bottom: 30px;
+        font-size: 24px;
+      }
 
-.form-group {
-  margin-bottom: 20px;
-}
+      .form-group {
+        margin-bottom: 20px;
+      }
 
-.form-group label {
-  display: block;
-  color: #f7931e;
-  margin-bottom: 8px;
-  font-size: 14px;
-  font-weight: 600;
-}
+      .form-group label {
+        display: block;
+        color: #f7931e;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 600;
+      }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px 15px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid #f7931e;
-  border-radius: 8px;
-  color: #000000;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 1px solid #f7931e;
+        border-radius: 8px;
+        color: #000000;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #ffd700;
-  background-color: white;
-  box-shadow: 0 0 0 3px rgba(247, 147, 30, 0.1);
-}
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #ffd700;
+        background-color: white;
+        box-shadow: 0 0 0 3px rgba(247, 147, 30, 0.1);
+      }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+      }
 
-.form-group textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-/* RESPONSIVE */
-@media (max-width: 968px) {
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-  
-  .contact-info {
-    gap: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact {
-    padding: 60px 0;
-  }
-
-  .contact-logo img {
-    width: 120px;
-  }
-
-  .contact-method {
-    padding: 12px;
-  }
-
-  .contact-icon-wrapper {
-    width: 45px;
-    height: 45px;
-  }
-
-  .contact-icon-img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .contact-form {
-    padding: 30px 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact {
-    padding: 50px 0;
-  }
-  
-  .contact-form {
-    padding: 25px 20px;
-  }
-  
-  .contact-logo img {
-    width: 100px;
-  }
-  
-  .contact-method {
-    gap: 15px;
-    padding: 10px;
-  }
-  
-  .contact-icon-wrapper {
-    width: 40px;
-    height: 40px;
-  }
-
-  .contact-icon-img {
-    width: 22px;
-    height: 22px;
-  }
-
-  .contact-value {
-    font-size: 14px;
-  }
-
-  .contact-hours {
-    font-size: 12px;
-  }
-}
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
 
       /* Footer */
       footer {
@@ -813,7 +672,7 @@
       }
 
       .footer-bottom {
-          background: #f7931e;
+        background: #f7931e;
         text-align: center;
         padding-top: 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -894,13 +753,12 @@
           border-radius: 12px;
         }
 
-       /* Asegurar que el contenedor tenga altura definida */
-         .about-image {
+        .about-image {
           width: 100%;
-          height: 400px; /* Ajusta esta altura según necesites */
+          height: 400px;
           overflow: hidden;
           border-radius: 12px;
-         }
+        }
 
         .section-title {
           font-size: 3.5rem;
@@ -919,17 +777,6 @@
         }
 
         .services-grid {
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-
-        /* FIXED: Products grid in 2 columns on tablets */
-        .products-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
-        }
-
-        /* Services in single column on tablets */
-        .services-grid {
           grid-template-columns: 1fr;
           gap: 1.5rem;
           max-width: 600px;
@@ -937,12 +784,12 @@
         }
 
         .service-card {
-          padding: 1.5rem;
+          padding: 1.2rem;
         }
 
         .service-icon {
           width: 280px;
-          height: 200px;
+          height: 300px;
         }
 
         .service-card h3 {
@@ -953,8 +800,23 @@
           font-size: 0.9rem;
         }
 
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+        }
+
         .quality img {
           max-width: 100%;
+          border-radius: 8px;
+        }
+
+        .contact-wrapper {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+        
+        .contact-info {
+          gap: 25px;
         }
       }
 
@@ -994,11 +856,11 @@
           gap: 1rem;
         }
 
-        
-.about-image {
-    height: 350px;
-    order: 1; /* Mueve la imagen arriba del texto */
-  }
+        .about-image {
+          height: 350px;
+          order: 1;
+        }
+
         .section-title {
           font-size: 2.8rem;
         }
@@ -1033,7 +895,6 @@
           font-size: 0.85rem;
         }
 
-        /* FIXED: Products grid in 2 columns on mobile */
         .products-grid {
           grid-template-columns: repeat(2, 1fr);
           gap: 1rem;
@@ -1052,6 +913,11 @@
           font-size: 4rem;
         }
 
+        .product-image img {
+          max-width: 70%;
+          max-height: 70%;
+        }
+
         .product-info h3 {
           font-size: 1.2rem;
         }
@@ -1065,12 +931,43 @@
           padding: 0.2rem 0.6rem;
         }
 
-        .service-card {
-          padding: 1.5rem;
+        .quality {
+          padding: 1rem 1rem;
+        }
+        
+        .quality img {
+          width: 400px;
+          height: 200px;
+        }
+        
+        .quality-title {
+          font-size: 2.2rem;
+        }
+
+        .contact {
+          padding: 60px 0;
+        }
+
+        .contact-logo img {
+          width: 120px;
+        }
+
+        .contact-method {
+          padding: 12px;
+        }
+
+        .contact-icon-wrapper {
+          width: 45px;
+          height: 45px;
+        }
+
+        .contact-icon-img {
+          width: 24px;
+          height: 24px;
         }
 
         .contact-form {
-          padding: 1.5rem;
+          padding: 30px 25px;
         }
 
         .footer-content {
@@ -1112,8 +1009,8 @@
 
         .service-icon {
           width: 240px;
-          height: 160px;
-          margin-bottom: 0.8rem;
+          height: 360px;
+          margin: -4rem;
         }
 
         .service-card h3 {
@@ -1125,28 +1022,66 @@
           font-size: 0.8rem;
         }
 
-        .quality img {
-          border-radius: 6px;
-        }
-
         .product-image {
           height: 120px;
           font-size: 3rem;
+        }
+
+        .product-image img {
+          max-width: 120px;
+          max-height: 60%;
         }
 
         .stat-number {
           font-size: 1.5rem;
         }
 
-          .about-image {
-           width: 100%;
-    object-fit: contain;
-          
-  }
+        .about-image {
+          width: 100%;
+          object-fit: contain;
+        }
   
-  .about-image img {
-    border-radius: 18px;
-  }
+        .about-image img {
+          border-radius: 18px;
+        }
+
+        .contact {
+          padding: 50px 0;
+        }
+        
+        .contact-form {
+          padding: 25px 20px;
+        }
+        
+        .contact-logo img {
+          width: 100px;
+        }
+        
+        .contact-method {
+          gap: 15px;
+          padding: 10px;
+          margin-left: 1rem;
+          align-items:center;
+        }
+        
+        .contact-icon-wrapper {
+          width: 50px;
+          height: 50px;
+        }
+
+        .contact-icon-img {
+          width: 22px;
+          height: 22px;
+        }
+
+        .contact-value {
+          font-size: 14px;
+        }
+
+        .contact-hours {
+          font-size: 12px;
+        }
+
         .contact-method {
           flex-direction: column;
           text-align: center;
@@ -1157,7 +1092,6 @@
           font-size: 0.9rem;
         }
 
-        /* Keep 2 columns but make them smaller */
         .products-grid {
           gap: 0.75rem;
         }
@@ -1195,10 +1129,11 @@
     <!-- Header -->
     <header>
       <nav>
-        <a href="index.html"
-          ><div class="logo">
-            <img src="img/Logo sin fondo 3 400x.png" alt="TROPEX" /></div
-        ></a>
+        <a href="index.html">
+          <div class="logo">
+            <img src="img/Logo sin fondo 3 400x.png" alt="TROPEX" />
+          </div>
+        </a>
 
         <div class="hamburger" id="hamburger">
           <span></span>
@@ -1222,8 +1157,8 @@
       <div class="hero-content">
         <h1>Premium Fresh Produce Exports</h1>
         <p>
-         Connecting Colombia's fresh produce to global markets through quality, 
-         consistency and trusted partnerships.
+          Connecting Colombia's fresh produce to global markets through quality, 
+          consistency and trusted partnerships.
         </p>
         <div>
           <a href="#contact" class="cta-button">Request Availability</a>
@@ -1235,10 +1170,10 @@
     <!-- About Section -->
     <section class="about" id="about">
       <div class="container">
-        <h2 class="section-title">AT TROPEX</h2>
+        <h2 class="section-title">ABOUT TROPEX</h2>
         <div class="about-content">
           <div class="about-text">
-            <P> Tropex, we specialize in exporting fresh fruits and herbs from Colombia to international markets. </P>
+            <P> At Tropex, we specialize in exporting fresh fruits and herbs from Colombia to international markets. </P>
             <p>We work closely with trusted growers to ensure consistent quality, reliable supply, and efficient logistics.
                Our focus is on building long-term partnerships through transparency, traceability, and high product standards.</p>
             <p>
@@ -1253,36 +1188,36 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
-  <div class="container">
-    <h2 class="services-title">WHAT IS OUR SERVICE?</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="img/Services.png" alt="Quality Sourcing" class="service-icon">
-        <h3>QUALITY SOURCING</h3>
-        <p>
-          We work directly with trusted growers to source premium fresh 
-          fruits and herbs that meet international quality standards. 
-        </p>
-      </div>
+      <div class="container">
+        <h2 class="services-title">WHAT IS OUR SERVICE?</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="img/Services.png" alt="Quality Sourcing" class="service-icon">
+            <h3>QUALITY SOURCING</h3>
+            <p>
+              We work directly with trusted growers to source premium fresh 
+              fruits and herbs that meet international quality standards. 
+            </p>
+          </div>
 
-      <div class="service-card">
-        <img src="img/Services 1.png" alt="Selection & Packing" class="service-icon">
-        <h3>SELECTION & PACKING</h3>
-        <p>Each product is carefully selected, packed, and handled to preserve freshness, 
-          consistency, and shelf life throughout the supply chain.</p>
-      </div>
+          <div class="service-card">
+            <img src="img/Services 1.png" alt="Selection & Packing" class="service-icon">
+            <h3>SELECTION & PACKING</h3>
+            <p>Each product is carefully selected, packed, and handled to preserve freshness, 
+              consistency, and shelf life throughout the supply chain.</p>
+          </div>
 
-      <div class="service-card">
-        <img src="img/Services2.png" alt="Export & Logistics" class="service-icon">
-        <h3>EXPORT & LOGISTICS</h3>
-        <p>
-          We manage the export process with reliable logistics solutions, 
-          ensuring timely deliveries and full compliance with international requirements. 
-        </p>
+          <div class="service-card">
+            <img src="img/Services2.png" alt="Export & Logistics" class="service-icon">
+            <h3>EXPORT & LOGISTICS</h3>
+            <p>
+              We manage the export process with reliable logistics solutions, 
+              ensuring timely deliveries and full compliance with international requirements. 
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Products Section -->
     <section class="products" id="catalog">
@@ -1320,7 +1255,6 @@
                 Exotic tropical fruit with creamy texture and unique sweet-tart
                 flavor, rich in antioxidants and vitamins.
               </p>
-   
             </div>
           </div>
 
@@ -1339,7 +1273,7 @@
             </div>
           </div>
 
-            <!-- Yellow Dragon Fruit -->
+          <!-- Yellow Dragon Fruit -->
           <div class="product-card">
             <div class="product-image">
               <span><img src="img/Yellow Dragon fruit.png" style="width: 180px;"></span>
@@ -1354,8 +1288,7 @@
             </div>
           </div>
 
-          
-            <!-- Physalis -->
+          <!-- Physalis -->
           <div class="product-card">
             <div class="product-image">
               <span><img src="img/Physalis.png" style="width: 200px;"></span>
@@ -1380,10 +1313,8 @@
                 Vibrant yellow passion fruit with intense flavor and high
                 acidity, ideal for juices and culinary applications.
               </p>
-              
             </div>
           </div>
-
 
           <!-- Purple Passion Fruit -->
           <div class="product-card">
@@ -1397,7 +1328,6 @@
                 Premium purple passion fruit with sweet-tart flavor, aromatic
                 pulp and high nutritional value for export markets.
               </p>
-              
             </div>
           </div>
 
@@ -1415,7 +1345,6 @@
             </div>
           </div>
 
-          
           <!-- Tamarillo -->
           <div class="product-card">
             <div class="product-image">
@@ -1445,7 +1374,7 @@
             </div>
           </div>
 
-         <!-- Small banana -->
+          <!-- Small banana -->
           <div class="product-card">
             <div class="product-image">
               <span><img src="img/mangosteen (2).png" style="width: 180px;"></span>
@@ -1453,13 +1382,12 @@
             <div class="product-info">
               <h3>Small Banana</h3>
               <p>
-                Small Banana  with intense sweet flavor and creamy texture, highly
+                Small Banana with intense sweet flavor and creamy texture, highly
                 appreciated in gourmet and premium markets.
               </p>
             </div>
           </div>
 
-          
           <!-- Star fruit -->
           <div class="product-card">
             <div class="product-image">
@@ -1502,7 +1430,6 @@
             </div>
           </div>
 
-          
           <!-- Mint -->
           <div class="product-card">
             <div class="product-image">
@@ -1514,10 +1441,10 @@
                 Fresh mint with refreshing aroma and cooling flavor, ideal for
                 beverages, desserts and culinary creations.
               </p>
+            </div>
           </div>
-        </div>
 
-         <!-- Rosemary -->
+          <!-- Rosemary -->
           <div class="product-card">
             <div class="product-image">
               <span><img src="img/Rosemary.png" style="width: 180px;"></span>
@@ -1526,10 +1453,10 @@
               <h3>Rosemary</h3>
               <p>
                 Rosemary is an aromatic herb with a fresh, woody scent and a slightly bitter flavor,
-                 widely used in cooking, natural remedies, and aromatherapy.
+                widely used in cooking, natural remedies, and aromatherapy.
               </p>
+            </div>
           </div>
-        </div>
 
           <!-- Thyme -->
           <div class="product-card">
@@ -1545,10 +1472,10 @@
             </div>
           </div>
 
-           <!-- Tarragon -->
+          <!-- Tarragon -->
           <div class="product-card">
             <div class="product-image">
-              <span><img src="img/Tarragon.png" style="width: 180px;" ></span>
+              <span><img src="img/Tarragon.png" style="width: 180px;"></span>
             </div>
             <div class="product-info">
               <h3>Tarragon</h3>
@@ -1558,122 +1485,118 @@
               </p>
             </div>
           </div>
+        </div>
       </div>
     </section>
 
     <!-- Quality Section -->
     <section class="quality" id="Logistics">
       <div class="container">
-        <h2 class="quality-title">Logistics map of our markets</h2>
+        <h2 class="quality-title">Global reach</h2>
         <img src="img/tropex mapa.jpg">
       </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-  <div class="container">
-    <h2 class="section-title">Contact us</h2>
-   
-    <div class="contact-wrapper">
-      <div class="contact-info">
-        <!-- Logo -->
-        <div class="contact-logo">
-          <img src="img/Logo sin fondo 3 400x.png" alt="Tropexcol Logo" />
-        </div>
+      <div class="container">
+        <h2 class="section-title">Contact us</h2>
+       
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <!-- Logo -->
+            <div class="contact-logo">
+              <img src="img/Logo sin fondo 3 400x.png" alt="Tropexcol Logo" />
+            </div>
 
-        <!-- Email -->
-        <div class="contact-method">
-          <div class="contact-icon-wrapper">
-            <img src="img/email.png" alt="Social Media" class="contacto-icon-img">
-            </svg>
-          </div>
-          <div class="contact-text">
-            <p class="contact-value">sales@tropexcol.com</p>
-          </div>
-        </div>
+            <!-- Email -->
+            <div class="contact-method">
+              <div class="contact-icon-wrapper">
+                <img src="img/email.png" alt="Social Media" class="contacto-icon-img">
+              </div>
+              <div class="contact-text">
+                <p class="contact-value">sales@tropexcol.com</p>
+              </div>
+            </div>
 
-        <!-- Phone -->
-        <div class="contact-method">
-          <div class="contact-icon-wrapper">
-           <img src="img/Contact.png" alt="Social Media" class="contacto-icon-img">
-            </svg>
-          </div>
-          <div class="contact-text">
-            <p class="contact-value">+57 (1) 800-123-4567</p>
-          </div>
-        </div>
+            <!-- Phone -->
+            <div class="contact-method">
+              <div class="contact-icon-wrapper">
+                <img src="img/Contact.png" alt="Social Media" class="contacto-icon-img">
+              </div>
+              <div class="contact-text">
+                <p class="contact-value">+57 3043392166</p>
+              </div>
+            </div>
 
-        <!-- Location -->
-        <div class="contact-method">
-          <div class="contact-icon-wrapper">
-              <img src="img/Location.png" alt="Social Media" class="contacto-icon-img">
-            </svg>
-          </div>
-          <div class="contact-text">
-            <p class="contact-value">From (delivery) Bogotá S.A</p>
-            <p class="contact-hours">Bogotá / Colombia</p>
-            <p class="contact-hours">WEEK DAYS / 8 A.M - 6 P.M</p>
+            <!-- Location -->
+            <div class="contact-method">
+              <div class="contact-icon-wrapper">
+                <img src="img/Location.png" alt="Social Media" class="contacto-icon-img">
+              </div>
+              <div class="contact-text">
+                <p class="contact-value">From (delivery) Bogotá S.A</p>
+                <p class="contact-hours">Bogotá / Colombia</p>
+                <p class="contact-hours">WEEK DAYS / 8 A.M - 6 P.M</p>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="contact-method">
+              <div class="contact-icon-wrapper">
+                <img src="img/Linkend.png" alt="Social Media" class="contacto-icon-img">
+              </div>
+              <div class="contact-text">
+                <a href="https://www.linkedin.com/company/tropexcol/"><p>@tropexcol</p></a>
+                <p class="contact-hours">LinkedIn</p>
+              </div>
+            </div>
           </div>
 
-        </div>
-           <!-- Social Media -->
-        <div class="contact-method">
-          <div class="contact-icon-wrapper">
-            <img src="img/Linkend.png" alt="Social Media" class="contacto-icon-img">
-          </div>
-          <div class="contact-text">
-            <a href="https://www.linkedin.com/company/tropexcol/"><p >@tropexcol</p></a>
-            <p class="contact-hours">LinkedIn</p>
+          <!--Contacto form-->
+          <div class="contact-form">
+            <h3>Request a Quote</h3>
+            <form id="quoteForm">
+              <div class="form-group">
+                <label for="company">Company Name *</label>
+                <input type="text" id="company" required />
+              </div>
+
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp *</label>
+                <input type="tel" id="phone" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea
+                  id="message"
+                  required
+                  placeholder="Include information about: required certifications, order frequency, particular specifications, preferred delivery terms, etc."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="cta-button" style="width: 100%">
+                Submit Request
+              </button>
+            </form>
           </div>
         </div>
       </div>
-
-        
-           
-        <!--Contacto form-->
-      <div class="contact-form">
-        <h3>Request a Quote</h3>
-        <form id="quoteForm">
-          <div class="form-group">
-            <label for="company">Company Name *</label>
-            <input type="text" id="company" required />
-          </div>
-
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone / WhatsApp *</label>
-            <input type="tel" id="phone" required />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea
-              id="message"
-              required
-              placeholder="Include information about: required certifications, order frequency, particular specifications, preferred delivery terms, etc."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="cta-button" style="width: 100%">
-            Submit Request
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Footer -->
-  
+    <footer>
       <div class="footer-bottom">
         <p>&copy; 2025 TROPEX. All rights reserved.</p>
       </div>
@@ -1720,30 +1643,25 @@
       });
 
       // Form submission
-      document
-        .getElementById("quoteForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+      document.getElementById("quoteForm").addEventListener("submit", function (e) {
+        e.preventDefault();
 
-          const formData = {
-            company: document.getElementById("company").value,
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            country: document.getElementById("country").value,
-            product: document.getElementById("product").value,
-            volume: document.getElementById("volume").value,
-            message: document.getElementById("message").value,
-          };
+        const formData = {
+          company: document.getElementById("company").value,
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          message: document.getElementById("message").value,
+        };
 
-          alert(
-            "Thank you for your request! We will contact you within the next 24 hours.\n\nData received:\nCompany: " +
-              formData.company +
-              "\nEmail: " +
-              formData.email
-          );
-          this.reset();
-        });
+        alert(
+          "Thank you for your request! We will contact you within the next 24 hours.\n\nData received:\nCompany: " +
+            formData.company +
+            "\nEmail: " +
+            formData.email
+        );
+        this.reset();
+      });
 
       // Scroll animation for cards
       const observerOptions = {
@@ -1759,11 +1677,9 @@
         });
       }, observerOptions);
 
-      document
-        .querySelectorAll(".product-card, .service-card")
-        .forEach((card) => {
-          observer.observe(card);
-        });
+      document.querySelectorAll(".product-card, .service-card").forEach((card) => {
+        observer.observe(card);
+      });
     </script>
   </body>
 </html>
