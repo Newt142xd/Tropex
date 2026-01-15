@@ -627,6 +627,65 @@
         resize: vertical;
       }
 
+      /* WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 25px;
+        right: 25px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+        animation: pulse 2s infinite;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 2px 2px 25px rgba(37, 211, 102, 0.5);
+        background-color: #20ba5a;
+      }
+
+      .whatsapp-float img {
+        width: 35px;
+        height: 35px;
+        filter: brightness(0) invert(1);
+      }
+
+      /* Tooltip */
+      .whatsapp-float::before {
+        content: "¿Necesitas ayuda?";
+        position: absolute;
+        right: 70px;
+        background-color: #ffffff;
+        color: #333;
+        padding: 8px 15px;
+        border-radius: 8px;
+        white-space: nowrap;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .whatsapp-float:hover::before {
+        opacity: 1;
+        visibility: visible;
+        right: 75px;
+      }
+
       /* Footer */
       footer {
         background: #f7931e;
@@ -682,6 +741,18 @@
         to {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
         }
       }
 
@@ -812,6 +883,24 @@
         
         .contact-info {
           gap: 25px;
+        }
+
+        /* WhatsApp Responsive - Tablets */
+        .whatsapp-float {
+          width: 55px;
+          height: 55px;
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .whatsapp-float img {
+          width: 32px;
+          height: 32px;
+        }
+
+        .whatsapp-float::before {
+          font-size: 13px;
+          padding: 7px 12px;
         }
       }
 
@@ -977,6 +1066,24 @@
         section {
           padding: 2rem 1rem;
         }
+
+        /* WhatsApp Responsive - Mobile */
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          bottom: 15px;
+          right: 15px;
+          font-size: 26px;
+        }
+
+        .whatsapp-float svg {
+          width: 28px !important;
+          height: 28px !important;
+        }
+
+        .whatsapp-float::before {
+          display: none; /* Hide tooltip on mobile */
+        }
       }
 
       /* Small Mobile - below 480px */
@@ -1093,6 +1200,19 @@
 
         .product-info h3 {
           font-size: 1rem;
+        }
+
+        /* WhatsApp Responsive - Small Mobile */
+        .whatsapp-float {
+          width: 48px;
+          height: 48px;
+          bottom: 12px;
+          right: 12px;
+        }
+
+        .whatsapp-float svg {
+          width: 26px !important;
+          height: 26px !important;
         }
       }
 
@@ -1230,8 +1350,8 @@
             <div class="product-info">
               <h3>Sugar Mango</h3>
               <p>
-                Premium export mangoes from the most internationally demanded
-                varieties, grown under optimal tropical conditions.
+               Premium mango variety known for its exceptional sweetness,
+                smooth texture, and low fiber content.
               </p>
             </div>
           </div>
@@ -1272,8 +1392,8 @@
             <div class="product-info">
               <h3>Yellow Dragon Fruit</h3>
               <p>
-                Exotic yellow pitaya with sweet white flesh and tiny black
-                seeds, highly sought after in premium markets.
+               Exotic yellow pitahaya with delicate sweetness and white flesh,
+                highly sought after in premium markets.
               </p>
             </div>
           </div>
@@ -1286,8 +1406,8 @@
             <div class="product-info">
               <h3>Physalis</h3>
               <p>
-                Golden berry with unique sweet-tart flavor, rich in antioxidants
-                and vitamins, perfect for gourmet markets.
+                Exotic golden berry with a vibrant sweet-tart flavor, 
+                prized for its versatility and natural nutritional value.
               </p>
             </div>
           </div>
@@ -1328,8 +1448,8 @@
             <div class="product-info">
               <h3>Red Guava</h3>
               <p>
-                Tropical red guava with fragrant aroma, pink or white flesh,
-                exceptional for fresh consumption and processing.
+                Exotic red guava with vibrant aroma, smooth texture,
+                 and naturally sweet flavor.
               </p>
             </div>
           </div>
@@ -1342,8 +1462,7 @@
             <div class="product-info">
               <h3>Tamarillo</h3>
               <p>
-                Tree tomato with unique tangy-sweet flavor, rich in vitamins and
-                minerals, perfect for exotic markets.
+                Exotic tamarillo with a bright, refreshing flavor and smooth, juicy texture.
               </p>
             </div>
           </div>
@@ -1356,8 +1475,8 @@
             <div class="product-info">
               <h3>Mangosteen</h3>
               <p>
-                Queen of fruits with delicate sweet flavor and soft white
-                segments, highly valued in Asian and European markets.
+                Exotic mangosteen prized for its delicate sweetness, 
+                smooth texture, and refined flavor profile.
               </p>
             </div>
           </div>
@@ -1467,8 +1586,7 @@
             <div class="product-info">
               <h3>Tarragon</h3>
               <p>
-                Premium fresh thyme with intense aroma and flavor, perfect for
-                gourmet cooking and culinary excellence.
+                Fresh tarragon with a distinctive aromatic profile and delicate anise-like notes.
               </p>
             </div>
           </div>
@@ -1522,8 +1640,7 @@
                 <img src="img/Location.png" alt="Social Media" class="contacto-icon-img">
               </div>
               <div class="contact-text">
-                <p class="contact-value">From (delivery) Bogotá S.A</p>
-                <p class="contact-hours">Bogotá / Colombia</p>
+                <p class="contact-value">Bogota / Colombia</p>
                 <p class="contact-hours">8 A.M - 6 P.M</p>
               </div>
             </div>
@@ -1588,6 +1705,17 @@
         <p>&copy; 2025 TROPEX. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573043392166?text=Hola%20Tropex,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20productos" 
+       class="whatsapp-float" 
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+      <svg viewBox="0 0 32 32" fill="currentColor" style="width: 35px; height: 35px;">
+        <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.924 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.960 18.723c-0.326-0.163-1.933-0.952-2.233-1.060s-0.518-0.163-0.736 0.163c-0.218 0.326-0.844 1.060-1.034 1.278s-0.381 0.244-0.707 0.081c-0.326-0.163-1.375-0.507-2.618-1.617-0.968-0.864-1.621-1.932-1.811-2.257s-0.020-0.502 0.143-0.665c0.146-0.146 0.326-0.381 0.489-0.571s0.218-0.326 0.326-0.544c0.108-0.218 0.054-0.408-0.027-0.571s-0.736-1.775-1.008-2.430c-0.265-0.638-0.534-0.551-0.736-0.561-0.190-0.010-0.408-0.012-0.626-0.012s-0.571 0.081-0.870 0.408c-0.299 0.326-1.141 1.115-1.141 2.718s1.169 3.153 1.332 3.371c0.163 0.218 2.294 3.503 5.556 4.912 0.776 0.336 1.383 0.536 1.855 0.686 0.780 0.244 1.490 0.210 2.050 0.127 0.626-0.093 1.933-0.790 2.205-1.553s0.272-1.417 0.190-1.553c-0.081-0.136-0.299-0.218-0.626-0.381z"/>
+      </svg>
+    </a>
 
     <script>
       // Hamburger Menu Toggle
